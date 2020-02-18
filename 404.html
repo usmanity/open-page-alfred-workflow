@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 Nothing Found</title>
+  <link rel="stylesheet" href="https://usmanity.com/css/styles.css">
+<head>
+<body>
+  <div class="container">
+  Looks like you didn't specify a URL with this identifier:
+
+  <p class="debugging">
+    Identifier: <strong id="identifier"></strong>
+  </p>
+
+  <p>
+    Learn more about how to configure your workflow here: <a href="https://github.com/usmanity/open-page-alfred-workflow">README</a>
+  </p>
+  </div>
+  <script>
+    function addIdentifier() {
+      var id = location.search.split('=')[1];
+      var el = document.getElementById('identifier');
+      el.innerText = id;
+    }
+
+    function ready(fn) {
+      if (document.readyState != 'loading'){
+        fn();
+      } else {
+        document.addEventListener('DOMContentLoaded', fn);
+      }
+    }
+
+    ready(addIdentifier);
+  </script>
+</body>
+</html>
