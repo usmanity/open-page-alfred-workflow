@@ -9,10 +9,14 @@ Structure:
 It's just a simple list of switch statements in ruby so I'll explain how to add yours below:
 
 
-when something is typed in 
+when something is typed in
+
 	when "g" ← this is your identifier 
-do something: 
+
+do something:
+
 	open "https://google.com" 
+
 
 
 That's it, now open Alfred and run "open g" and the url should open.
